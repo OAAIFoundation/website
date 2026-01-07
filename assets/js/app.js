@@ -473,7 +473,7 @@ const translations = {
     'community-eyebrow': 'Communauté',
     'members-eyebrow': 'Membres',
     'members-title': 'Nos organisations membres',
-    'members-body': 'La Fondation Open Agentic AI n'aurait pas été possible sans le soutien, les efforts de développement et la collaboration ouverte de nos membres fondateurs platines.',
+    'members-body': 'La Fondation Open Agentic AI n\'aurait pas été possible sans le soutien, les efforts de développement et la collaboration ouverte de nos membres fondateurs platines.',
     'community-title': 'Une coalition mondiale de bâtisseurs, chercheurs et décideurs.',
     'community-body': 'Nous rassemblons contributeurs open source, startups, entreprises, universités et société civile pour co-concevoir la nouvelle ère de l’IA agentique.',
     'highlight-1-title': 'Ouvert et neutre',
