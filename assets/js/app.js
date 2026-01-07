@@ -507,7 +507,6 @@ const translations = {
 };
 
 const languageSwitcher = document.getElementById('language-switcher');
-const textNodes = document.querySelectorAll('[data-i18n]');
 const navLinks = document.querySelectorAll('.nav-links a');
 
 function applyLanguage(lang) {
@@ -516,15 +515,14 @@ function applyLanguage(lang) {
   }
   const messages = translations[lang] || translations['en'];
   document.documentElement.lang = lang;
-  if (textNodes.length > 0) {
-    textNodes.forEach(node => {
-      if (!node) return;
-      const key = node.getAttribute('data-i18n');
-      if (messages[key]) {
-        node.textContent = messages[key];
-      }
-    });
-  }
+  const textNodes = document.querySelectorAll('[data-i18n]');
+  textNodes.forEach(node => {
+    if (!node) return;
+    const key = node.getAttribute('data-i18n');
+    if (messages[key]) {
+      node.textContent = messages[key];
+    }
+  });
   if (languageSwitcher) {
     languageSwitcher.value = lang;
   }
@@ -536,7 +534,12 @@ function applyLanguage(lang) {
 }
 
 function initLanguage() {
-  const saved = localStorage.getItem('oaif-lang');
+  let saved = null;
+  try {
+    saved = localStorage.getItem('oaif-lang');
+  } catch (e) {
+    console.warn('Failed to read language preference:', e);
+  }
   const fallback = 'en';
   const preferred = (saved && translations[saved]) ? saved : fallback;
   languageSwitcher.value = preferred;
