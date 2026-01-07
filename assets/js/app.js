@@ -511,30 +511,45 @@ const textNodes = document.querySelectorAll('[data-i18n]');
 const navLinks = document.querySelectorAll('.nav-links a');
 
 function applyLanguage(lang) {
+  if (!translations[lang]) {
+    lang = 'en';
+  }
   const messages = translations[lang] || translations['en'];
   document.documentElement.lang = lang;
-  textNodes.forEach(node => {
-    const key = node.getAttribute('data-i18n');
-    if (messages[key]) {
-      node.textContent = messages[key];
-    }
-  });
-  localStorage.setItem('oaif-lang', lang);
+  if (textNodes.length > 0) {
+    textNodes.forEach(node => {
+      if (!node) return;
+      const key = node.getAttribute('data-i18n');
+      if (messages[key]) {
+        node.textContent = messages[key];
+      }
+    });
+  }
+  if (languageSwitcher) {
+    languageSwitcher.value = lang;
+  }
+  try {
+    localStorage.setItem('oaif-lang', lang);
+  } catch (e) {
+    console.warn('Failed to save language preference:', e);
+  }
 }
 
 function initLanguage() {
   const saved = localStorage.getItem('oaif-lang');
   const fallback = 'en';
-  const preferred = translations[saved] ? saved : fallback;
+  const preferred = (saved && translations[saved]) ? saved : fallback;
   languageSwitcher.value = preferred;
   applyLanguage(preferred);
 }
 
-languageSwitcher.addEventListener('change', event => {
-  applyLanguage(event.target.value);
-});
+if (languageSwitcher) {
+  languageSwitcher.addEventListener('change', event => {
+    applyLanguage(event.target.value);
+  });
 
-initLanguage();
+  initLanguage();
+}
 
 function setupSmoothScroll() {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
