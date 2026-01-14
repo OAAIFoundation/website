@@ -38,3 +38,7 @@ The site uses data attributes (`data-i18n`) and a language switcher. Translation
 ## Local Preview
 
 Open `index.html` directly in a browser, or serve the directory with any static file server.
+
+## License
+
+MIT. See `LICENSE`.
