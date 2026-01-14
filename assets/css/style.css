@@ -73,10 +73,19 @@ a {
 }
 
 .logo {
-  font-family: "Space Grotesk", "Inter", sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 0.3px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo__image {
+  display: block;
+  height: 48px;
+  width: auto;
+}
+
+.logo__image--mark {
+  display: none;
 }
 
 .nav-links {
@@ -456,6 +465,15 @@ main {
 }
 
 @media (max-width: 768px) {
+  .logo__image--full {
+    display: none;
+  }
+
+  .logo__image--mark {
+    display: block;
+    height: 40px;
+  }
+
   .logo-wall {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
