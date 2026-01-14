@@ -1,18 +1,11 @@
-<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Open Agentic AI Foundation mark">
-  <defs>
-    <style>
-      .node { fill: #6fb3e6; }
-      .link { stroke: #6fb3e6; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
-    </style>
-  </defs>
-  <g transform="translate(8 8)">
-    <path class="link" d="M24 68 L48 44 L80 52 L88 28" />
-    <path class="link" d="M24 68 L36 28 L68 28 L88 52" />
-    <circle class="node" cx="24" cy="68" r="14" />
-    <circle class="node" cx="36" cy="28" r="12" />
-    <circle class="node" cx="68" cy="28" r="12" />
-    <circle class="node" cx="88" cy="52" r="12" />
-    <circle class="node" cx="48" cy="44" r="10" />
-    <circle class="node" cx="80" cy="52" r="10" />
-  </g>
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="393.000000pt" height="444.000000pt" viewBox="0 0 393.000000 444.000000"
+ preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,444.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+</g>
 </svg>
