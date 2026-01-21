@@ -474,15 +474,6 @@ main {
 }
 
 @media (max-width: 768px) {
-  .logo__image--full {
-    display: none;
-  }
-
-  .logo__image--mark {
-    display: block;
-    height: 40px;
-  }
-
   .logo-wall {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
@@ -645,8 +636,23 @@ main {
     padding: 14px 24px;
   }
 
+  .logo {
+    flex: 0 0 auto;
+    max-width: calc(100% - 60px);
+  }
+
+  .logo__image--full {
+    display: block !important;
+    height: 32px;  /* 移动端缩小一点 */
+  }
+
+  .logo__image--mark {
+    display: none !important;
+  }
+
   .mobile-menu-toggle {
     display: flex;
+    flex-shrink: 0;
   }
 
   .nav-links {
