@@ -758,3 +758,75 @@ function setupSectionObserver() {
 
 setupSmoothScroll();
 setupSectionObserver();
+
+// Mobile menu toggle
+function setupMobileMenu() {
+  const menuToggle = document.querySelector('.mobile-menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  const headerActions = document.querySelector('.header-actions');
+  const dropdownItems = document.querySelectorAll('.nav-item--dropdown');
+
+  if (!menuToggle || !navLinks) return;
+
+  // Toggle mobile menu
+  menuToggle.addEventListener('click', () => {
+    const isActive = navLinks.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+    menuToggle.setAttribute('aria-expanded', isActive);
+  });
+
+  // Handle dropdown clicks on mobile
+  dropdownItems.forEach(item => {
+    const link = item.querySelector('a');
+    if (!link) return;
+
+    link.addEventListener('click', (e) => {
+      // Only prevent default on mobile
+      if (window.innerWidth <= 960) {
+        e.preventDefault();
+        item.classList.toggle('active');
+      }
+    });
+  });
+
+  // Close menu when clicking nav links
+  const allNavLinks = navLinks.querySelectorAll('a:not(.nav-item--dropdown > a)');
+  allNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 960) {
+        navLinks.classList.remove('active');
+        menuToggle.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  // Close menu when clicking action buttons
+  if (headerActions) {
+    const actionButtons = headerActions.querySelectorAll('.btn');
+    actionButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        if (window.innerWidth <= 960) {
+          navLinks.classList.remove('active');
+          menuToggle.classList.remove('active');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  }
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (window.innerWidth <= 960 && 
+        !menuToggle.contains(e.target) && 
+        !navLinks.contains(e.target) &&
+        (!headerActions || !headerActions.contains(e.target)) &&
+        navLinks.classList.contains('active')) {
+      navLinks.classList.remove('active');
+      menuToggle.classList.remove('active');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+
+setupMobileMenu();
