@@ -510,7 +510,7 @@ main {
 
 @media (max-width: 768px) {
   .logo-wall {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
 
@@ -543,7 +543,7 @@ main {
 
 @media (max-width: 480px) {
   .logo-wall {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
