@@ -467,10 +467,45 @@ main {
   font-family: "Space Grotesk", "Inter", sans-serif;
 }
 
+.member-logo {
+  width: 100%;
+  max-width: 160px;
+  height: auto;
+  max-height: 80px;
+  object-fit: contain;
+}
+
 .logo-name {
   color: var(--muted);
   font-size: 14px;
   font-weight: 500;
+}
+
+.community-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.community-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: 80px;
+}
+
+.community-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--glow);
 }
 
 @media (max-width: 768px) {
@@ -485,14 +520,30 @@ main {
     font-size: 18px;
   }
 
+  .member-logo {
+    max-width: 100px;
+    max-height: 50px;
+  }
+
   .logo-name {
     font-size: 12px;
+  }
+
+  .community-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .community-item {
+    font-size: 14px;
+    padding: 16px;
+    min-height: 60px;
   }
 }
 
 @media (max-width: 480px) {
   .logo-wall {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
