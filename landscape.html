@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Agentic AI Landscape - A comprehensive overview of the agentic AI ecosystem curated by The Open Agentic AI Foundation.">
+  <title>Agentic AI Landscape · The Open Agentic AI Foundation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <a class="logo" href="index.html" aria-label="The Open Agentic AI Foundation home">
+      <img class="logo__image logo__image--full" src="assets/images/oaaif-logo-full.svg" alt="The Open Agentic AI Foundation logo">
+      <img class="logo__image logo__image--mark" src="assets/images/oaaif-logo-mark.svg" alt="Open Agentic AI Foundation mark">
+    </a>
+    <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav-links">
+      <a href="index.html#main-content" data-i18n="nav-home">Home</a>
+      <div class="nav-item nav-item--dropdown">
+        <a href="index.html#programs" data-i18n="nav-projects">Projects</a>
+        <div class="nav-dropdown">
+          <a href="index.html#programs" data-i18n="nav-projects-overview">Projects overview</a>
+          <a href="landscape.html" data-i18n="nav-projects-landscape">Landscape</a>
+          <a href="agentos-omnicompute.html" data-i18n="nav-projects-agentos">AgentOS - OmniCompute</a>
+        </div>
+      </div>
+      <a href="index.html#pillars" data-i18n="nav-standards">Standards</a>
+      <a href="index.html#community" data-i18n="nav-activities">Activities</a>
+      <a href="index.html#members" data-i18n="nav-developers">Developers</a>
+      <a href="index.html#resources" data-i18n="nav-open-lab">Open Lab</a>
+      <a href="index.html#join" data-i18n="nav-training">Training & Certification</a>
+      <div class="nav-item nav-item--dropdown">
+        <a href="about.html#overview" data-i18n="nav-about">About Us</a>
+        <div class="nav-dropdown">
+          <a href="about.html#overview" data-i18n="nav-about-foundation">Foundation overview</a>
+          <a href="about.html#mission" data-i18n="nav-about-mission">Mission</a>
+          <a href="about.html#pillars" data-i18n="nav-about-charter">Charter</a>
+          <a href="about.html#members" data-i18n="nav-about-structure">Organization structure</a>
+          <a href="about.html#resources" data-i18n="nav-about-donors">Donor directory</a>
+        </div>
+      </div>
+    </nav>
+    <div class="header-actions">
+      <select id="language-switcher" aria-label="Language selector">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="zh-CN">简体中文</option>
+        <option value="zh-TW">繁體中文</option>
+        <option value="ja">日本語</option>
+        <option value="fr">Français</option>
+      </select>
+      <a class="btn ghost" href="index.html#join" data-i18n="hero-cta-secondary">See the roadmap</a>
+      <a class="btn" href="index.html#community" data-i18n="hero-cta-primary">Join the movement</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="overview" class="section">
+      <div class="section__header">
+        <p class="eyebrow" data-i18n="landscape-eyebrow">Ecosystem Overview</p>
+        <h1 data-i18n="landscape-title">Agentic AI Landscape</h1>
+        <p class="section__description" data-i18n="landscape-subtitle">A comprehensive visualization of the agentic AI ecosystem, mapping infrastructure, models, and frameworks that power autonomous AI systems.</p>
+      </div>
+    </section>
+
+    <section id="agent-infrastructure" class="section section--alt">
+      <div class="section__header">
+        <p class="eyebrow" data-i18n="landscape-agent-eyebrow">Agent Infrastructure</p>
+        <h2 data-i18n="landscape-agent-title">Agentic AI Infrastructure Landscape</h2>
+        <p class="section__description" data-i18n="landscape-agent-body">The foundational infrastructure layer that enables autonomous AI agents to plan, reason, and execute tasks across diverse environments.</p>
+      </div>
+      <div class="architecture-diagram">
+        <img src="assets/images/landscape_agent_infra.png" alt="Agentic AI Infrastructure Landscape" style="max-width: 100%; height: auto; border-radius: var(--radius); box-shadow: var(--shadow-card);">
+      </div>
+    </section>
+
+    <section id="model-infrastructure" class="section">
+      <div class="section__header">
+        <p class="eyebrow" data-i18n="landscape-model-eyebrow">Model Infrastructure</p>
+        <h2 data-i18n="landscape-model-title">Model Infrastructure Landscape</h2>
+        <p class="section__description" data-i18n="landscape-model-body">The computational backbone supporting model training, inference, and deployment across cloud and edge environments.</p>
+      </div>
+      <div class="architecture-diagram">
+        <img src="assets/images/landscape_model_infra.png" alt="Model Infrastructure Landscape" style="max-width: 100%; height: auto; border-radius: var(--radius); box-shadow: var(--shadow-card);">
+      </div>
+    </section>
+
+    <section id="large-models" class="section section--alt">
+      <div class="section__header">
+        <p class="eyebrow" data-i18n="landscape-llm-eyebrow">Large Models</p>
+        <h2 data-i18n="landscape-llm-title">Large Language Models Landscape</h2>
+        <p class="section__description" data-i18n="landscape-llm-body">A comprehensive map of foundation models powering the next generation of intelligent agents and applications.</p>
+      </div>
+      <div class="architecture-diagram">
+        <img src="assets/images/landscape_large_models.png" alt="Large Language Models Landscape" style="max-width: 100%; height: auto; border-radius: var(--radius); box-shadow: var(--shadow-card);">
+      </div>
+    </section>
+
+    <section id="acknowledgment" class="section">
+      <div class="section__header">
+        <p class="eyebrow" data-i18n="landscape-ack-eyebrow">Acknowledgment</p>
+        <h2 data-i18n="landscape-ack-title">Source & Attribution</h2>
+      </div>
+      <div class="highlight">
+        <p data-i18n="landscape-ack-body">These landscape visualizations are sourced from the Agentic AI Landscape project, an open initiative to map and understand the rapidly evolving agentic AI ecosystem.</p>
+        <p style="margin-top: 1.5rem;">
+          <strong data-i18n="landscape-ack-source-label">Source:</strong>
+          <a href="https://github.com/antgroup/agentic-ai-landscape" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: underline;">
+            https://github.com/antgroup/agentic-ai-landscape
+          </a>
+        </p>
+        <p style="margin-top: 1.5rem;" data-i18n="landscape-ack-thanks">We extend our sincere gratitude to the maintainers and contributors of the Agentic AI Landscape project for their outstanding work in documenting and visualizing this complex ecosystem. Their efforts provide invaluable insights for the global AI community.</p>
+      </div>
+    </section>
+
+    <section id="join" class="section section--cta">
+      <div class="cta">
+        <div>
+          <p class="eyebrow" data-i18n="cta-eyebrow">Get involved</p>
+          <h2 data-i18n="landscape-cta-title">Contribute to the Agentic AI Ecosystem</h2>
+          <p data-i18n="landscape-cta-body">Help us build open standards, infrastructure, and governance for the next generation of autonomous AI systems.</p>
+        </div>
+        <div class="cta__actions">
+          <a class="btn" href="index.html#community" data-i18n="cta-primary">Join the coalition</a>
+          <a class="btn ghost" href="index.html#resources" data-i18n="cta-secondary">Browse resources</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__brand" data-i18n="brand-name">The Open Agentic AI Foundation</div>
+    <p class="footer__text" data-i18n="footer-copy">Open, safe, and interoperable agentic AI for everyone.</p>
+    <div class="footer__links">
+      <a href="index.html#main-content" data-i18n="nav-home">Home</a>
+      <a href="index.html#programs" data-i18n="nav-projects">Projects</a>
+      <a href="index.html#pillars" data-i18n="nav-standards">Standards</a>
+      <a href="index.html#community" data-i18n="nav-activities">Activities</a>
+      <a href="index.html#members" data-i18n="nav-developers">Developers</a>
+      <a href="index.html#resources" data-i18n="nav-open-lab">Open Lab</a>
+      <a href="index.html#join" data-i18n="nav-training">Training & Certification</a>
+      <a href="about.html#overview" data-i18n="nav-about">About Us</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
