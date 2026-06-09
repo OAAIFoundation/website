@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="OmniCompute: AgentOS Architecture based on KubeEdge Collaborative AI Blueprint - A CNCF-aligned initiative under The Open Agentic AI Foundation.">
+  <title>AgentOS - OmniCompute · The Open Agentic AI Foundation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <a class="logo" href="index.html" aria-label="The Open Agentic AI Foundation home">
+      <img class="logo__image logo__image--full" src="assets/images/oaaif-logo-full.svg" alt="The Open Agentic AI Foundation logo">
+      <img class="logo__image logo__image--mark" src="assets/images/oaaif-logo-mark.svg" alt="Open Agentic AI Foundation mark">
+    </a>
+    <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav-links">
+      <a href="index.html#main-content" data-i18n="nav-home">Home</a>
+      <div class="nav-item nav-item--dropdown">
+        <a href="index.html#programs" data-i18n="nav-projects">Projects</a>
+        <div class="nav-dropdown">
+          <a href="index.html#programs" data-i18n="nav-projects-overview">Projects overview</a>
+          <a href="agentos-omnicompute.html" data-i18n="nav-projects-agentos">AgentOS - OmniCompute</a>
+        </div>
+      </div>
+      <a href="index.html#pillars" data-i18n="nav-standards">Standards</a>
+      <a href="index.html#community" data-i18n="nav-activities">Activities</a>
+      <a href="index.html#members" data-i18n="nav-developers">Developers</a>
+      <a href="index.html#resources" data-i18n="nav-open-lab">Open Lab</a>
+      <a href="index.html#join" data-i18n="nav-training">Training & Certification</a>
+      <div class="nav-item nav-item--dropdown">
+        <a href="about.html#overview" data-i18n="nav-about">About Us</a>
+        <div class="nav-dropdown">
+          <a href="about.html#overview" data-i18n="nav-about-foundation">Foundation overview</a>
+          <a href="about.html#mission" data-i18n="nav-about-mission">Mission</a>
+          <a href="about.html#pillars" data-i18n="nav-about-charter">Charter</a>
+          <a href="about.html#members" data-i18n="nav-about-structure">Organization structure</a>
+          <a href="about.html#resources" data-i18n="nav-about-donors">Donor directory</a>
+        </div>
+      </div>
+    </nav>
+    <div class="header-actions">
+      <select id="language-switcher" aria-label="Language selector">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="zh-CN">简体中文</option>
+        <option value="zh-TW">繁體中文</option>
+        <option value="ja">日本語</option>
+        <option value="fr">Français</option>
+      </select>
+      <a class="btn ghost" href="index.html#join" data-i18n="hero-cta-secondary">See the roadmap</a>
+      <a class="btn" href="index.html#community" data-i18n="hero-cta-primary">Join the movement</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="overview" class="section">
+      <div class="section__header">
+        <p class="eyebrow" data-i18n="omni-eyebrow">AgentOS Blueprint</p>
+        <h1 data-i18n="omni-title">OmniCompute: KubeEdge Collaborative AI Architecture</h1>
+        <p class="section__description" data-i18n="omni-subtitle">A CNCF-aligned initiative to accelerate the adoption of generative and agentic AI across the device-edge-cloud continuum.</p>
+        <p class="section__meta" data-i18n="omni-author">By: Shane Wang</p>
+      </div>
+    </section>
+
+    <section id="executive-summary" class="section section--alt">
+      <div class="section__header">
+        <p class="eyebrow" data-i18n="omni-exec-eyebrow">Executive Summary</p>
+        <h2 data-i18n="omni-exec-title">Unified AgentOS Reference Architecture</h2>
+        <p class="section__description" data-i18n="omni-exec-body">This proposal establishes the KubeEdge Collaborative AI Blueprint as a CNCF-aligned initiative to accelerate the adoption of generative and agentic AI across the device-edge-cloud continuum.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <h3 data-i18n="omni-exec-card-1-title">Reference Architecture</h3>
+          <p data-i18n="omni-exec-card-1-body">Define OmniCompute for AgentOS spanning devices, edge nodes, and the cloud.</p>
+        </article>
+        <article class="card">
+          <h3 data-i18n="omni-exec-card-2-title">Reusable Implementations</h3>
+          <p data-i18n="omni-exec-card-2-body">Deliver tested implementations of intelligent routing, privacy guardrails, and local inference gateways.</p>
+        </article>
+        <article class="card">
+          <h3 data-i18n="omni-exec-card-3-title">Seamless Orchestration</h3>
+          <p data-i18n="omni-exec-card-3-body">Leverage KubeEdge to ensure seamless AI workload orchestration, unified API access, and dynamic task scheduling.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="background" class="section">
+      <div class="section__header">
+        <p class="eyebrow" data-i18n="omni-bg-eyebrow">Background</p>
+        <h2 data-i18n="omni-bg-title">The Edge-Cloud AI Challenge</h2>
+        <p class="section__description" data-i18n="omni-bg-body">As AI use cases evolve toward multi-modal and agentic systems, relying solely on centralized cloud data centers presents insurmountable challenges regarding bandwidth costs, unpredictable network latency, and strict data privacy regulations. Conversely, edge devices alone lack the hardware resources to run massive parameter models.</p>
+      </div>
+      <div class="highlight">
+        <p data-i18n="omni-bg-highlight">KubeEdge, as a leading cloud-native edge computing framework under CNCF, natively extends Kubernetes orchestration to the edge. By leveraging KubeEdge's robust edge-cloud synchronization and combining it with lightweight inference gateways, we can build a collaborative closed-loop system: edge devices handle sensitive and low-latency tasks locally, while complex reasoning is seamlessly routed to the cloud.</p>
+      </div>
+    </section>
+
+    <section id="problem" class="section section--alt">
+      <div class="section__header">
+        <p class="eyebrow" data-i18n="omni-prob-eyebrow">Problem Statement</p>
+        <h2 data-i18n="omni-prob-title">Severe Fragmentation at the Edge</h2>
+        <p class="section__description" data-i18n="omni-prob-body">Enterprises deploying Agents (especially LLMs) at the edge face severe fragmentation across multiple dimensions.</p>
+      </div>
+      <div class="pillars">
+        <article class="pillar">
+          <div class="pill pill--accent" data-i18n="omni-prob-1-tag">Compute</div>
+          <h3 data-i18n="omni-prob-1-title">Compute/Model Mismatch</h3>
+          <p data-i18n="omni-prob-1-body">Edge devices (Local XPUs) cannot independently host ultra-large models and lack the capability to dynamically decompose or route complex tasks to the cloud.</p>
+        </article>
+        <article class="pillar">
+          <div class="pill pill--accent" data-i18n="omni-prob-2-tag">Privacy</div>
+          <h3 data-i18n="omni-prob-2-title">Privacy & Compliance Risks</h3>
+          <p data-i18n="omni-prob-2-body">Transmitting raw edge data directly to the cloud expands the attack surface and risks PII leakage. There is a lack of unified data desensitization and policy enforcement.</p>
+        </article>
+        <article class="pillar">
+          <div class="pill pill--accent" data-i18n="omni-prob-3-tag">Routing</div>
+          <h3 data-i18n="omni-prob-3-title">Rigid Routing</h3>
+          <p data-i18n="omni-prob-3-body">Current systems lack intelligent inference routing based on token cost, network latency, and task complexity.</p>
+        </article>
+        <article class="pillar">
+          <div class="pill pill--accent" data-i18n="omni-prob-4-tag">Management</div>
+          <h3 data-i18n="omni-prob-4-title">Siloed Environments</h3>
+          <p data-i18n="omni-prob-4-body">Managing heterogeneous deployments, model distribution, and microservices across the edge-cloud continuum lacks a unified control plane.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="goals" class="section">
+      <div class="section__header">
+        <p class="eyebrow" data-i18n="omni-goals-eyebrow">Goals & Scope</p>
+        <h2 data-i18n="omni-goals-title">Blueprint Objectives</h2>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <h3 data-i18n="omni-goals-1-title">Unified Inference Interface</h3>
+          <p data-i18n="omni-goals-1-body">Provide a standardized microservice/API layer for AI Agents, masking the underlying edge-cloud topology.</p>
+        </article>
+        <article class="card">
+          <h3 data-i18n="omni-goals-2-title">Intelligent Compute Dispatching</h3>
+          <p data-i18n="omni-goals-2-body">Dynamically allocate inference requests between local edge XPUs and cloud accelerators (e.g., Gaudi, standard GPUs) based on task complexity and resource availability.</p>
+        </article>
+        <article class="card">
+          <h3 data-i18n="omni-goals-3-title">Enterprise-Grade Privacy</h3>
+          <p data-i18n="omni-goals-3-body">Enforce strict data isolation, redaction, and policy checks at the edge before any cloud transmission.</p>
+        </article>
+        <article class="card">
+          <h3 data-i18n="omni-goals-4-title">Reusable Reference Implementations</h3>
+          <p data-i18n="omni-goals-4-body">Deliver a blueprint that can be adopted "as-is" for production or easily customized.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="architecture" class="section section--alt">
+      <div class="section__header">
+        <p class="eyebrow" data-i18n="omni-arch-eyebrow">Proposed Architecture</p>
+        <h2 data-i18n="omni-arch-title">OmniCompute Blueprint Layers</h2>
+        <p class="section__description" data-i18n="omni-arch-body">Based on the OmniCompute architecture, this blueprint divides the collaborative inference system into the following core layers.</p>
+      </div>
+      <div class="architecture-diagram">
+        <img src="assets/images/omnicompute-architecture.png" alt="OmniCompute Architecture Diagram" style="max-width: 100%; height: auto; border-radius: var(--radius); box-shadow: var(--shadow-card);">
+      </div>
+    </section>
+
+    <section id="layers" class="section">
+      <div class="section__header">
+        <p class="eyebrow" data-i18n="omni-layers-eyebrow">Architecture Layers</p>
+        <h2 data-i18n="omni-layers-title">Core System Components</h2>
+      </div>
+      <div class="pillars">
+        <article class="pillar">
+          <div class="pill pill--accent" data-i18n="omni-layer-1-tag">Layer 1</div>
+          <h3 data-i18n="omni-layer-1-title">Application & API Layer</h3>
+          <p data-i18n="omni-layer-1-body">Agents or Applications based on Device-Edge-Cloud Collaborative AI Inference. Provides unified REST/gRPC endpoints, allowing higher-level applications to interact with the distributed edge-cloud infrastructure as if calling a single, unified model.</p>
+        </article>
+        <article class="pillar">
+          <div class="pill pill--accent" data-i18n="omni-layer-2-tag">Layer 2</div>
+          <h3 data-i18n="omni-layer-2-title">Collaborative Control Plane</h3>
+          <p data-i18n="omni-layer-2-body">The routing and security brain of the blueprint, consisting of Privacy Protection (Policy Check, PII Audit, Data Desensitization), Intelligent Routing (Task Complexity Analysis, Resource Awareness, Route Selection), and Adaptation (Resource Monitoring, Cost Analysis, Load Balancing).</p>
+        </article>
+        <article class="pillar">
+          <div class="pill pill--accent" data-i18n="omni-layer-3-tag">Layer 3</div>
+          <h3 data-i18n="omni-layer-3-title">Execution & Inference Data Plane</h3>
+          <p data-i18n="omni-layer-3-body">Inference Gateway (e.g., LiteLLM Proxy Server) acts as the critical bridge, standardizing protocols across all distributed models. Includes Local Inference Framework, Local XPU management, and Model Conversion Toolset for edge deployment.</p>
+        </article>
+        <article class="pillar">
+          <div class="pill pill--accent" data-i18n="omni-layer-4-tag">Layer 4</div>
+          <h3 data-i18n="omni-layer-4-title">Infrastructure Layer (KubeEdge)</h3>
+          <p data-i18n="omni-layer-4-body">Leveraging KubeEdge for seamless connectivity. Edge Node contains Local Controller and Worker, ensuring autonomous operation and local privacy. Cloud Node contains Global Manager and Worker managed by Kubernetes, handling global routing policies and model distribution.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="roadmap" class="section section--alt">
+      <div class="section__header">
+        <p class="eyebrow" data-i18n="omni-roadmap-eyebrow">Roadmap</p>
+        <h2 data-i18n="omni-roadmap-title">Implementation Timeline</h2>
+      </div>
+      <div class="programs">
+        <article class="program">
+          <div class="program__meta" data-i18n="omni-phase-1-time">June - July 2026</div>
+          <h3 data-i18n="omni-phase-1-title">Phase 1: Foundation</h3>
+          <p data-i18n="omni-phase-1-body">Draft final charter, select initial blueprint scope, and map out stakeholders. Define Cloud/Edge gateway API standards and KubeEdge CRD extensions.</p>
+        </article>
+        <article class="program">
+          <div class="program__meta" data-i18n="omni-phase-2-time">August - September 2026</div>
+          <h3 data-i18n="omni-phase-2-title">Phase 2: MVP Release</h3>
+          <p data-i18n="omni-phase-2-body">MVP reference implementation featuring static rule-based routing and basic privacy interceptors. Initial benchmarking on edge deployment targets and local XPU validation.</p>
+        </article>
+        <article class="program">
+          <div class="program__meta" data-i18n="omni-phase-3-time">October - November 2026</div>
+          <h3 data-i18n="omni-phase-3-title">Phase 3: Production Hardening</h3>
+          <p data-i18n="omni-phase-3-body">Hardened release: Dynamic intelligent routing based on task complexity, advanced observability, and telemetry. Partner pilot deployments and community adoption drives.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="metrics" class="section">
+      <div class="section__header">
+        <p class="eyebrow" data-i18n="omni-metrics-eyebrow">Success Criteria</p>
+        <h2 data-i18n="omni-metrics-title">Performance & Safety Metrics</h2>
+      </div>
+      <div class="metrics">
+        <div class="metric">
+          <div class="metric__value" data-i18n="omni-metric-1-value">>30%</div>
+          <div class="metric__label" data-i18n="omni-metric-1-label">Reduction in Time-to-First-Token (TTFT) for high-concurrency scenarios via edge offloading</div>
+        </div>
+        <div class="metric">
+          <div class="metric__value" data-i18n="omni-metric-2-value">99.9%</div>
+          <div class="metric__label" data-i18n="omni-metric-2-label">Success rate in intercepting sensitive data at the edge</div>
+        </div>
+        <div class="metric">
+          <div class="metric__value" data-i18n="omni-metric-3-value">40%</div>
+          <div class="metric__label" data-i18n="omni-metric-3-label">Reduction in cloud API usage costs</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="team" class="section section--alt">
+      <div class="section__header">
+        <p class="eyebrow" data-i18n="omni-team-eyebrow">Project Team</p>
+        <h2 data-i18n="omni-team-title">Core Members</h2>
+      </div>
+      <div class="community-list">
+        <div class="community-item">Shane Wang - Intel</div>
+        <div class="community-item">Wang Changjin - ZTE</div>
+        <div class="community-item">Zhuang Biaowei - OAAIF</div>
+        <div class="community-item">Yang Xin - LF APAC</div>
+        <div class="community-item">Wang Wei - ECNU</div>
+        <div class="community-item">Mark Shan - Tencent Cloud</div>
+        <div class="community-item">Guo Xue - CAICT</div>
+        <div class="community-item">Chen Yanjun - China Mobile</div>
+      </div>
+    </section>
+
+    <section id="join" class="section section--cta">
+      <div class="cta">
+        <div>
+          <p class="eyebrow" data-i18n="cta-eyebrow">Get involved</p>
+          <h2 data-i18n="omni-cta-title">Join the OmniCompute Initiative</h2>
+          <p data-i18n="omni-cta-body">We are seeking CNCF endorsement, partner commitments, and pilot deployment sponsors. Join us in building the future of collaborative edge-cloud AI.</p>
+        </div>
+        <div class="cta__actions">
+          <a class="btn" href="mailto:admin@oaaif.org" data-i18n="cta-primary">Join the coalition</a>
+          <a class="btn ghost" href="index.html#resources" data-i18n="cta-secondary">Browse resources</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__brand" data-i18n="brand-name">The Open Agentic AI Foundation</div>
+    <p class="footer__text" data-i18n="footer-copy">Open, safe, and interoperable agentic AI for everyone.</p>
+    <div class="footer__links">
+      <a href="index.html#main-content" data-i18n="nav-home">Home</a>
+      <a href="index.html#programs" data-i18n="nav-projects">Projects</a>
+      <a href="index.html#pillars" data-i18n="nav-standards">Standards</a>
+      <a href="index.html#community" data-i18n="nav-activities">Activities</a>
+      <a href="index.html#members" data-i18n="nav-developers">Developers</a>
+      <a href="index.html#resources" data-i18n="nav-open-lab">Open Lab</a>
+      <a href="index.html#join" data-i18n="nav-training">Training & Certification</a>
+      <a href="about.html#overview" data-i18n="nav-about">About Us</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
