@@ -173,24 +173,83 @@
     <section id="goals" class="section">
       <div class="section__header">
         <p class="eyebrow" data-i18n="omni-goals-eyebrow">Goals & Scope</p>
-        <h2 data-i18n="omni-goals-title">Blueprint Objectives</h2>
+        <h2 data-i18n="omni-goals-title">The Vision: OmniCompute as the Universal AgentOS</h2>
+        <p class="section__description" data-i18n="omni-goals-vision">As the industry shifts from passive conversational AI to proactive, autonomous Agentic systems, the infrastructure must evolve. Future AI Agents will not be confined to a single environment; they will require an underlying fabric that seamlessly manages physical sensors, local compute, and cloud intelligence. The ultimate goal of this blueprint is to establish OmniCompute as the foundational AgentOS. By creating a unified infrastructure layer, OmniCompute will serve as the universal substrate for all Agent execution—abstracting away hardware complexity so that Agents can run securely and efficiently, whether their optimal topology is pure-device, pure-cloud, edge-cloud, device-cloud, or a full device-edge-cloud continuum.</p>
+      </div>
+
+      <div class="section__header" style="margin-top: 3rem;">
+        <h3 data-i18n="omni-goals-subtitle">Goals</h3>
       </div>
       <div class="cards">
         <article class="card">
-          <h3 data-i18n="omni-goals-1-title">Unified Inference Interface</h3>
-          <p data-i18n="omni-goals-1-body">Provide a standardized microservice/API layer for AI Agents, masking the underlying edge-cloud topology.</p>
+          <h3 data-i18n="omni-goals-1-title">Establish the Universal AgentOS Foundation</h3>
+          <p data-i18n="omni-goals-1-body">Provide a standardized, unified runtime environment (AgentOS) that abstracts the underlying infrastructure. This ensures that AI Agents can be developed once and seamlessly deployed across any combination of device, edge, and cloud topologies without code rewrites.</p>
         </article>
         <article class="card">
-          <h3 data-i18n="omni-goals-2-title">Intelligent Compute Dispatching</h3>
-          <p data-i18n="omni-goals-2-body">Dynamically allocate inference requests between local edge XPUs and cloud accelerators (e.g., Gaudi, standard GPUs) based on task complexity and resource availability.</p>
+          <h3 data-i18n="omni-goals-2-title">Topological Agnosticism & Fluid Execution</h3>
+          <p data-i18n="omni-goals-2-body">Empower the AgentOS to support all possible deployment permutations. Whether an enterprise requires a fully air-gapped pure-edge setup, a hybrid edge-cloud link, or a comprehensive device-edge-cloud continuum, the blueprint dynamically adapts to the available physical infrastructure.</p>
         </article>
         <article class="card">
-          <h3 data-i18n="omni-goals-3-title">Enterprise-Grade Privacy</h3>
-          <p data-i18n="omni-goals-3-body">Enforce strict data isolation, redaction, and policy checks at the edge before any cloud transmission.</p>
+          <h3 data-i18n="omni-goals-3-title">Intelligent Compute Dispatching</h3>
+          <p data-i18n="omni-goals-3-body">Enable the AgentOS to dynamically allocate and migrate inference requests across local XPUs (NPU/GPU) and cloud accelerators. Routing decisions will be made in real-time based on token cost, network latency, task complexity, and energy constraints.</p>
         </article>
         <article class="card">
-          <h3 data-i18n="omni-goals-4-title">Reusable Reference Implementations</h3>
-          <p data-i18n="omni-goals-4-body">Deliver a blueprint that can be adopted "as-is" for production or easily customized.</p>
+          <h3 data-i18n="omni-goals-4-title">Enterprise-Grade Privacy & Zero-Trust</h3>
+          <p data-i18n="omni-goals-4-body">Embed strict data isolation, PII redaction, and policy enforcement natively at the device and edge layers, ensuring that the AgentOS guarantees regulatory compliance before any telemetry ever reaches the public cloud.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="scope" class="section section--alt">
+      <div class="section__header">
+        <h2 data-i18n="omni-scope-title">Scope: Initial Domain Candidates</h2>
+        <p class="section__description" data-i18n="omni-scope-body">To validate the OmniCompute AgentOS across varying latency, privacy, and compute requirements, the blueprint will initially target five core industry domains, directly addressing the pain points of rigid, siloed architectures:</p>
+      </div>
+
+      <div class="programs">
+        <article class="program">
+          <div class="program__image">
+            <img src="assets/images/personal_ai.png" alt="Personal AI & Smart Assistants" style="width: 100%; border-radius: var(--radius); box-shadow: var(--shadow-card);">
+          </div>
+          <div class="program__meta" data-i18n="omni-scope-1-topology">Device + Edge + Cloud</div>
+          <h3 data-i18n="omni-scope-1-title">Personal AI & Next-Gen Smart Assistants</h3>
+          <p data-i18n="omni-scope-1-body">Shifting toward proactive, localized Personal AI Agents. Lightweight models on AI PCs/smartphones handle instant wake-words and biometric filtering (preserving zero-trust privacy), local home networks manage vector context, and the cloud handles deep logical reasoning and long-term planning.</p>
+        </article>
+
+        <article class="program">
+          <div class="program__image">
+            <img src="assets/images/robotics.png" alt="Robotics & Embodied AI" style="width: 100%; border-radius: var(--radius); box-shadow: var(--shadow-card);">
+          </div>
+          <div class="program__meta" data-i18n="omni-scope-2-topology">Device + Edge + Cloud</div>
+          <h3 data-i18n="omni-scope-2-title">Robotics & Embodied AI</h3>
+          <p data-i18n="omni-scope-2-body">Breaking the compute limits of standalone robots. The device (robot) executes high-frequency kinematic control and real-time SLAM; the edge coordinates fleet-wide tasks and multi-robot collision avoidance; the cloud acts as the central brain for complex simulation training and foundational model updates.</p>
+        </article>
+
+        <article class="program">
+          <div class="program__image">
+            <img src="assets/images/manufacture.png" alt="Industrial Manufacturing" style="width: 100%; border-radius: var(--radius); box-shadow: var(--shadow-card);">
+          </div>
+          <div class="program__meta" data-i18n="omni-scope-3-topology">Edge + Cloud (with Device sensors)</div>
+          <h3 data-i18n="omni-scope-3-title">Industrial Manufacturing (Defect Detection)</h3>
+          <p data-i18n="omni-scope-3-body">Winning the millisecond battle in industrial vision. Edge nodes process hundreds of frames per second to identify scratches and drive robotic arms (<5ms latency, saving 95% bandwidth), while the cloud aggregates defect data to refine detection accuracy and power production dashboards.</p>
+        </article>
+
+        <article class="program">
+          <div class="program__image">
+            <img src="assets/images/smart_city.jpg" alt="Smart City & Traffic Control" style="width: 100%; border-radius: var(--radius); box-shadow: var(--shadow-card);">
+          </div>
+          <div class="program__meta" data-i18n="omni-scope-4-topology">Edge + Cloud</div>
+          <h3 data-i18n="omni-scope-4-title">Smart City & Adaptive Traffic Control</h3>
+          <p data-i18n="omni-scope-4-body">Creating a city-wide intelligent brain. Roadside edge nodes independently process intersection monitoring and dynamically adjust traffic lights (ensuring basic logic survives even if disconnected), while the cloud handles global green-wave topology planning and digital twin simulations.</p>
+        </article>
+
+        <article class="program">
+          <div class="program__image">
+            <img src="assets/images/automotive.png" alt="Autonomous Driving" style="width: 100%; border-radius: var(--radius); box-shadow: var(--shadow-card);">
+          </div>
+          <div class="program__meta" data-i18n="omni-scope-5-topology">Device + Edge + Cloud</div>
+          <h3 data-i18n="omni-scope-5-title">Autonomous Driving (V2X Collaborative Perception)</h3>
+          <p data-i18n="omni-scope-5-body">Augmenting single-vehicle intelligence. The vehicle (device) handles emergency obstacle avoidance; the roadside unit (edge) provides ultra-low latency 5G-V2X warnings to eliminate visual blind spots; the cloud maintains high-definition map updates and long-distance route orchestration.</p>
         </article>
       </div>
     </section>
