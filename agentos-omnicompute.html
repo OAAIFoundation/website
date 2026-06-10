@@ -143,29 +143,29 @@
     <section id="problem" class="section section--alt">
       <div class="section__header">
         <p class="eyebrow" data-i18n="omni-prob-eyebrow">Problem Statement</p>
-        <h2 data-i18n="omni-prob-title">Severe Fragmentation at the Edge</h2>
-        <p class="section__description" data-i18n="omni-prob-body">Enterprises deploying Agents (especially LLMs) at the edge face severe fragmentation across multiple dimensions.</p>
+        <h2 data-i18n="omni-prob-title">Critical Architectural Fragmentation</h2>
+        <p class="section__description" data-i18n="omni-prob-body">While the demand for deploying autonomous AI Agents and Large Language Models (LLMs) closer to the data source is surging, enterprises attempting to scale these systems from proof-of-concept to production across distributed environments face severe architectural fragmentation. The industry currently lacks a standardized, production-ready framework to resolve the following critical friction points:</p>
       </div>
       <div class="pillars">
         <article class="pillar">
           <div class="pill pill--accent" data-i18n="omni-prob-1-tag">Compute</div>
-          <h3 data-i18n="omni-prob-1-title">Compute/Model Mismatch</h3>
-          <p data-i18n="omni-prob-1-body">Edge devices (Local XPUs) cannot independently host ultra-large models and lack the capability to dynamically decompose or route complex tasks to the cloud.</p>
+          <h3 data-i18n="omni-prob-1-title">Compute/Model Mismatch and Execution Bottlenecks</h3>
+          <p data-i18n="omni-prob-1-body">Agentic AI systems demand massive computational power (VRAM, memory bandwidth) that physical edge devices and local XPUs cannot independently provide. Conversely, forcing small, heavily quantized models onto edge devices leads to unacceptable accuracy degradation in complex reasoning tasks. Current architectures treat model execution as a binary choice (all-edge or all-cloud) and lack the capability to dynamically decompose agent workflows—for instance, handling simple prompt parsing and tool execution locally while offloading heavy generative tasks to cloud accelerators.</p>
         </article>
         <article class="pillar">
           <div class="pill pill--accent" data-i18n="omni-prob-2-tag">Privacy</div>
-          <h3 data-i18n="omni-prob-2-title">Privacy & Compliance Risks</h3>
-          <p data-i18n="omni-prob-2-body">Transmitting raw edge data directly to the cloud expands the attack surface and risks PII leakage. There is a lack of unified data desensitization and policy enforcement.</p>
+          <h3 data-i18n="omni-prob-2-title">The Privacy, Security, and Compliance Chasm</h3>
+          <p data-i18n="omni-prob-2-body">In sectors like healthcare, industrial manufacturing, and smart cities, transmitting raw, high-frequency multimodal data directly to the cloud drastically expands the attack surface and exposes organizations to severe PII (Personally Identifiable Information) leakage. Existing edge deployments severely lack standardized, out-of-the-box privacy guardrails (such as local policy enforcement, regex-based auditing, and automated data desensitization) prior to cloud transmission, making strict compliance with regulations like GDPR or HIPAA nearly impossible without building bespoke middleware.</p>
         </article>
         <article class="pillar">
           <div class="pill pill--accent" data-i18n="omni-prob-3-tag">Routing</div>
-          <h3 data-i18n="omni-prob-3-title">Rigid Routing</h3>
-          <p data-i18n="omni-prob-3-body">Current systems lack intelligent inference routing based on token cost, network latency, and task complexity.</p>
+          <h3 data-i18n="omni-prob-3-title">Rigid and Context-Blind Routing Mechanisms</h3>
+          <p data-i18n="omni-prob-3-body">Current AI inference gateways are overwhelmingly cloud-centric and static. They lack the "edge awareness" required to perform intelligent, dynamic routing based on real-time constraints. When a user or agent submits a prompt, existing systems cannot automatically route the request based on task complexity, fluctuating local vs. cloud resource availability, API token costs, or sudden network jitter. This rigidity leads to unnecessary cloud expenditures, unpredictable latency spikes, and inefficient utilization of expensive edge XPU assets.</p>
         </article>
         <article class="pillar">
           <div class="pill pill--accent" data-i18n="omni-prob-4-tag">Management</div>
-          <h3 data-i18n="omni-prob-4-title">Siloed Environments</h3>
-          <p data-i18n="omni-prob-4-body">Managing heterogeneous deployments, model distribution, and microservices across the edge-cloud continuum lacks a unified control plane.</p>
+          <h3 data-i18n="omni-prob-4-title">Siloed Environments and Fragmented Control Planes</h3>
+          <p data-i18n="omni-prob-4-body">Operating heterogeneous AI deployments across the device-edge-cloud continuum currently requires stitching together disjointed toolchains. Managing physical edge hardware, distributing large model weights (OTA updates), synchronizing agent state, and orchestrating microservices across fragmented network topologies lack a unified control plane. This siloed approach severely hinders observability, complicates federated lifecycle management, and creates brittle infrastructure that is impossible to maintain at scale.</p>
         </article>
       </div>
     </section>
