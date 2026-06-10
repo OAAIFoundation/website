@@ -536,23 +536,36 @@
     <section id="roadmap" class="section section--alt">
       <div class="section__header">
         <p class="eyebrow" data-i18n="omni-roadmap-eyebrow">Roadmap</p>
-        <h2 data-i18n="omni-roadmap-title">Implementation Timeline</h2>
+        <h2 data-i18n="omni-roadmap-title">Three-Phase Implementation Strategy</h2>
+        <p class="section__description" data-i18n="omni-roadmap-intro">To systematically build and scale the OmniCompute AgentOS, the roadmap is divided into three critical phases, progressing from core API definitions to full-scale distributed orchestration.</p>
       </div>
-      <div class="programs">
-        <article class="program">
-          <div class="program__meta" data-i18n="omni-phase-1-time">June - July 2026</div>
-          <h3 data-i18n="omni-phase-1-title">Phase 1: Foundation</h3>
-          <p data-i18n="omni-phase-1-body">Draft final charter, select initial blueprint scope, and map out stakeholders. Define Cloud/Edge gateway API standards and KubeEdge CRD extensions.</p>
+      <div class="pillars">
+        <article class="pillar">
+          <div class="pill pill--accent" data-i18n="omni-phase-1-time">June - July 2026</div>
+          <h3 data-i18n="omni-phase-1-title">Phase 1: Standardization & Foundation</h3>
+          <ul>
+            <li data-i18n="omni-phase-1-item-1"><strong>Governance & Scoping:</strong> Officially launch the project under the OAAIF TOC and initiate the joint working group with CNCF (targeting KubeEdge SIG AI).</li>
+            <li data-i18n="omni-phase-1-item-2"><strong>Spec Definition:</strong> Draft the universal AgentOS API standards and define the Cloud/Edge gateway interface protocols.</li>
+            <li data-i18n="omni-phase-1-item-3"><strong>Infrastructure Blueprinting:</strong> Define the KubeEdge CRD extensions required to support dynamic Agent workload scheduling across the continuum.</li>
+          </ul>
         </article>
-        <article class="program">
-          <div class="program__meta" data-i18n="omni-phase-2-time">August - September 2026</div>
-          <h3 data-i18n="omni-phase-2-title">Phase 2: MVP Release</h3>
-          <p data-i18n="omni-phase-2-body">MVP reference implementation featuring static rule-based routing and basic privacy interceptors. Initial benchmarking on edge deployment targets and local XPU validation.</p>
+        <article class="pillar">
+          <div class="pill pill--accent" data-i18n="omni-phase-2-time">August - September 2026</div>
+          <h3 data-i18n="omni-phase-2-title">Phase 2: MVP & Localized AgentOS</h3>
+          <ul>
+            <li data-i18n="omni-phase-2-item-1"><strong>Reference Implementation Release:</strong> Deliver the MVP of the AgentOS reference architecture, specifically targeting AI PCs and Edge Workstations.</li>
+            <li data-i18n="omni-phase-2-item-2"><strong>Core Capabilities:</strong> Implement static rule-based routing and basic zero-trust privacy interceptors (regex/policy checking) at the local edge.</li>
+            <li data-i18n="omni-phase-2-item-3"><strong>Hardware Validation:</strong> Initial benchmarking and optimization on diverse local XPU hardware to ensure smooth local execution of lightweight Agent models.</li>
+          </ul>
         </article>
-        <article class="program">
-          <div class="program__meta" data-i18n="omni-phase-3-time">October - November 2026</div>
-          <h3 data-i18n="omni-phase-3-title">Phase 3: Production Hardening</h3>
-          <p data-i18n="omni-phase-3-body">Hardened release: Dynamic intelligent routing based on task complexity, advanced observability, and telemetry. Partner pilot deployments and community adoption drives.</p>
+        <article class="pillar">
+          <div class="pill pill--accent" data-i18n="omni-phase-3-time">October - November 2026</div>
+          <h3 data-i18n="omni-phase-3-title">Phase 3: The Full Continuum & Dynamic Orchestration</h3>
+          <ul>
+            <li data-i18n="omni-phase-3-item-1"><strong>Hardened Scale-Out Release:</strong> Integrate full Data Center Server support via KubeEdge, establishing the complete Device-Edge-Cloud collaborative loop.</li>
+            <li data-i18n="omni-phase-3-item-2"><strong>Advanced Intelligence:</strong> Roll out dynamic, real-time intelligent routing based on Agent task complexity, multi-modal payload size, and global telemetry.</li>
+            <li data-i18n="omni-phase-3-item-3"><strong>Pilot Deployments:</strong> Launch enterprise partner pilot programs focusing on specific Agent deployments (e.g., Personal AI Assistants on AI PCs, or Embodied AI in industrial robotics).</li>
+          </ul>
         </article>
       </div>
     </section>
@@ -560,21 +573,44 @@
     <section id="metrics" class="section">
       <div class="section__header">
         <p class="eyebrow" data-i18n="omni-metrics-eyebrow">Success Criteria</p>
-        <h2 data-i18n="omni-metrics-title">Performance & Safety Metrics</h2>
+        <h2 data-i18n="omni-metrics-title">Measurable Impact Across Agentic Workflows</h2>
+        <p class="section__description" data-i18n="omni-metrics-intro">The success of the OmniCompute blueprint will be measured not just by infrastructure efficiency, but by how seamlessly it enables Agentic workflows.</p>
       </div>
-      <div class="metrics">
-        <div class="metric">
-          <div class="metric__value" data-i18n="omni-metric-1-value">>30%</div>
-          <div class="metric__label" data-i18n="omni-metric-1-label">Reduction in Time-to-First-Token (TTFT) for high-concurrency scenarios via edge offloading</div>
-        </div>
-        <div class="metric">
-          <div class="metric__value" data-i18n="omni-metric-2-value">99.9%</div>
-          <div class="metric__label" data-i18n="omni-metric-2-label">Success rate in intercepting sensitive data at the edge</div>
-        </div>
-        <div class="metric">
-          <div class="metric__value" data-i18n="omni-metric-3-value">40%</div>
-          <div class="metric__label" data-i18n="omni-metric-3-label">Reduction in cloud API usage costs</div>
-        </div>
+      <div class="pillars">
+        <article class="pillar">
+          <div class="pill pill--accent" data-i18n="omni-metric-1-tag">Performance</div>
+          <h3 data-i18n="omni-metric-1-title">Agent Responsiveness</h3>
+          <div class="metric">
+            <div class="metric__value" data-i18n="omni-metric-1-value">>30%</div>
+            <div class="metric__label" data-i18n="omni-metric-1-label">Reduction in Time-to-First-Token (TTFT)</div>
+          </div>
+          <p data-i18n="omni-metric-1-body">Achieve a greater than 30% reduction in Time-to-First-Token (TTFT) for high-concurrency Agent interactions by successfully offloading critical reasoning tasks to edge infrastructure, effectively bypassing cloud network latency.</p>
+        </article>
+        <article class="pillar">
+          <div class="pill pill--accent" data-i18n="omni-metric-2-tag">Safety & Cost</div>
+          <h3 data-i18n="omni-metric-2-title">Zero-Trust Safety & Cloud OpEx Reduction</h3>
+          <div class="metrics" style="display: flex; gap: 2rem; margin: 1rem 0;">
+            <div class="metric">
+              <div class="metric__value" data-i18n="omni-metric-2-value">99.9%</div>
+              <div class="metric__label" data-i18n="omni-metric-2-label">PII interception success rate</div>
+            </div>
+            <div class="metric">
+              <div class="metric__value" data-i18n="omni-metric-2-value-2">40%</div>
+              <div class="metric__label" data-i18n="omni-metric-2-label-2">Cloud API cost reduction</div>
+            </div>
+          </div>
+          <p data-i18n="omni-metric-2-body">Guarantee a 99.9% success rate in intercepting and desensitizing raw PII/sensitive data at the local edge prior to any cloud transmission. Concurrently, achieve up to a 40% reduction in cloud API usage costs through intelligent local-first routing.</p>
+        </article>
+        <article class="pillar">
+          <div class="pill pill--accent" data-i18n="omni-metric-3-tag">Portability</div>
+          <h3 data-i18n="omni-metric-3-title">AgentOS Portability ("Write Once, Run Anywhere")</h3>
+          <p data-i18n="omni-metric-3-body">Successfully run at least three major autonomous Agent frameworks (e.g., Claude Code, OpenHands, Auto-GPT) on the OmniCompute API layer without requiring any application-level code modifications.</p>
+        </article>
+        <article class="pillar">
+          <div class="pill pill--accent" data-i18n="omni-metric-4-tag">Interoperability</div>
+          <h3 data-i18n="omni-metric-4-title">Infrastructure Interoperability</h3>
+          <p data-i18n="omni-metric-4-body">Validate the reference implementation across a diverse hardware matrix, ensuring seamless execution across varied AI PCs, Edge Workstations, and Data Center Servers, while supporting at least 3 major open-source inference backends (e.g., vLLM, Ollama, TensorRT-LLM).</p>
+        </article>
       </div>
     </section>
 
