@@ -104,11 +104,39 @@
     <section id="background" class="section">
       <div class="section__header">
         <p class="eyebrow" data-i18n="omni-bg-eyebrow">Background</p>
-        <h2 data-i18n="omni-bg-title">The Edge-Cloud AI Challenge</h2>
-        <p class="section__description" data-i18n="omni-bg-body">As AI use cases evolve toward multi-modal and agentic systems, relying solely on centralized cloud data centers presents insurmountable challenges regarding bandwidth costs, unpredictable network latency, and strict data privacy regulations. Conversely, edge devices alone lack the hardware resources to run massive parameter models.</p>
+        <h2 data-i18n="omni-bg-title">The Infrastructure Paradigm Shift</h2>
+        <p class="section__description" data-i18n="omni-bg-body">As artificial intelligence evolves from single-task classification toward multi-modal, generative, and autonomous agentic systems, the underlying infrastructure must undergo a paradigm shift. Historically, the industry has oscillated between two extreme deployment models—Cloud-Only and Edge-Only—both of which present insurmountable barriers for scaling next-generation AI.</p>
       </div>
-      <div class="highlight">
-        <p data-i18n="omni-bg-highlight">KubeEdge, as a leading cloud-native edge computing framework under CNCF, natively extends Kubernetes orchestration to the edge. By leveraging KubeEdge's robust edge-cloud synchronization and combining it with lightweight inference gateways, we can build a collaborative closed-loop system: edge devices handle sensitive and low-latency tasks locally, while complex reasoning is seamlessly routed to the cloud.</p>
+
+      <div class="pillars" style="margin-top: 3rem;">
+        <article class="pillar">
+          <div class="pill pill--accent" data-i18n="omni-bg-cloud-tag">Cloud-Only</div>
+          <h3 data-i18n="omni-bg-cloud-title">The Bottlenecks of a Cloud-Only AI Architecture</h3>
+          <p data-i18n="omni-bg-cloud-intro">Relying solely on centralized cloud data centers for AI inference introduces four critical friction points:</p>
+          <ul>
+            <li data-i18n="omni-bg-cloud-1"><strong>Unsurpassable Latency:</strong> Physical distance and network routing typically result in RTT exceeding 100ms, making cloud-only inference incompatible with mission-critical scenarios requiring millisecond-level responses.</li>
+            <li data-i18n="omni-bg-cloud-2"><strong>Exorbitant Costs:</strong> Streaming massive volumes of continuous raw data causes severe network congestion. Bandwidth costs combined with cloud GPU pricing makes continuous inference economically unviable at scale.</li>
+            <li data-i18n="omni-bg-cloud-3"><strong>Privacy & Compliance Risks:</strong> Transmitting sensitive information over public networks exposes organizations to security breaches and violates strict regulatory frameworks (GDPR, HIPAA).</li>
+            <li data-i18n="omni-bg-cloud-4"><strong>Network Dependency:</strong> Cloud-centric systems possess a critical single point of failure. Lost connectivity means edge terminals instantly lose intelligence, causing production downtime or safety hazards.</li>
+          </ul>
+        </article>
+
+        <article class="pillar">
+          <div class="pill pill--accent" data-i18n="omni-bg-edge-tag">Edge-Only</div>
+          <h3 data-i18n="omni-bg-edge-title">The Hard Limits of Edge-Only/On-Device Inference</h3>
+          <p data-i18n="omni-bg-edge-intro">Attempting to push all reasoning to the edge introduces a different set of physical and operational hard limits:</p>
+          <ul>
+            <li data-i18n="omni-bg-edge-1"><strong>Compute Scarcity:</strong> Edge gateways and embedded XPU chips lack the VRAM and compute density required to load and serve large-scale foundational models (70B+ parameter models).</li>
+            <li data-i18n="omni-bg-edge-2"><strong>Accuracy Degradation:</strong> To fit models onto constrained hardware, aggressive pruning and quantization heavily compromise reasoning capabilities, leading to unacceptable accuracy drops.</li>
+            <li data-i18n="omni-bg-edge-3"><strong>Operational Nightmare:</strong> Managing thousands of geographically dispersed, siloed edge nodes makes unified model versioning, telemetry, and troubleshooting incredibly difficult.</li>
+            <li data-i18n="omni-bg-edge-4"><strong>Power & Thermal Constraints:</strong> On-device inference is bottlenecked by battery life and thermal limits. Continuous high-load AI models rapidly drain power and cause thermal throttling.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="highlight" style="margin-top: 3rem;">
+        <h3 data-i18n="omni-bg-solution-title">The Need for a Collaborative Continuum</h3>
+        <p data-i18n="omni-bg-solution-body">Neither extreme is sustainable. To unlock the true potential of physical and agentic AI, we require a dynamic, unified topology. By leveraging mature cloud-native edge computing frameworks (such as CNCF's KubeEdge or other extensible orchestrators), we can establish a collaborative closed-loop system. In this continuum, edge devices handle real-time, privacy-sensitive, and low-latency pre-processing, while complex, compute-heavy reasoning and global context orchestration are seamlessly and securely routed to the cloud.</p>
       </div>
     </section>
 
