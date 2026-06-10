@@ -257,39 +257,222 @@
     <section id="architecture" class="section section--alt">
       <div class="section__header">
         <p class="eyebrow" data-i18n="omni-arch-eyebrow">Proposed Architecture</p>
-        <h2 data-i18n="omni-arch-title">OmniCompute Blueprint Layers</h2>
-        <p class="section__description" data-i18n="omni-arch-body">Based on the OmniCompute architecture, this blueprint divides the collaborative inference system into the following core layers.</p>
+        <h2 data-i18n="omni-arch-title">Modular Blueprint Design</h2>
+        <p class="section__description" data-i18n="omni-arch-body">To realize the vision of OmniCompute as the universal AgentOS, the architecture is decoupled into distinct, highly specialized layers. This modular design ensures that the system can dynamically adapt to any hardware topology while remaining entirely agnostic to the specific agents or models running on top of it.</p>
       </div>
       <div class="architecture-diagram">
         <img src="assets/images/omnicompute-architecture.png" alt="OmniCompute Architecture Diagram" style="max-width: 100%; height: auto; border-radius: var(--radius); box-shadow: var(--shadow-card);">
       </div>
     </section>
 
-    <section id="layers" class="section">
+    <section id="layer-1" class="section">
       <div class="section__header">
-        <p class="eyebrow" data-i18n="omni-layers-eyebrow">Architecture Layers</p>
-        <h2 data-i18n="omni-layers-title">Core System Components</h2>
+        <div class="pill pill--accent" data-i18n="omni-layer-1-tag">Layer 1</div>
+        <h2 data-i18n="omni-layer-1-title">Application Layer (The Agent Ecosystem)</h2>
+        <p class="section__description" data-i18n="omni-layer-1-intro">This is the uppermost layer, representing the diverse ecosystem of AI applications that drive business logic.</p>
+      </div>
+      <div class="highlight" style="margin-bottom: 2rem;">
+        <h3 data-i18n="omni-layer-1-intent-title">Design Intent</h3>
+        <p data-i18n="omni-layer-1-intent">To completely abstract the underlying hardware and network complexity from the application developers. Agents should focus purely on reasoning and execution, not on where the computation is happening.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <h3 data-i18n="omni-layer-1-comp-1-title">Autonomous AI Agents</h3>
+          <p data-i18n="omni-layer-1-comp-1-body">Modern, complex agents such as Claude Code, OpenHands (formerly OpenDevin), Auto-GPT, or custom enterprise agents.</p>
+        </article>
+        <article class="card">
+          <h3 data-i18n="omni-layer-1-comp-2-title">Multi-Agent Swarms</h3>
+          <p data-i18n="omni-layer-1-comp-2-body">Collaborative groups of agents working on shared tasks (e.g., a planner agent coordinating with an executor agent).</p>
+        </article>
+        <article class="card">
+          <h3 data-i18n="omni-layer-1-comp-3-title">Traditional AI Applications</h3>
+          <p data-i18n="omni-layer-1-comp-3-body">Legacy machine learning apps transitioning to generative AI.</p>
+        </article>
+      </div>
+      <div class="highlight" style="margin-top: 2rem; background: var(--color-error-bg); border-left: 4px solid var(--color-error);">
+        <h3 data-i18n="omni-layer-1-whatif-title">What Happens Without It?</h3>
+        <p data-i18n="omni-layer-1-whatif">Without this abstraction layer acting as an AgentOS, every single agent would need hardcoded logic to handle network drops, switch model endpoints when rate limits are hit, or manage local hardware constraints, crippling developer velocity.</p>
+      </div>
+    </section>
+
+    <section id="layer-2" class="section section--alt">
+      <div class="section__header">
+        <div class="pill pill--accent" data-i18n="omni-layer-2-tag">Layer 2</div>
+        <h2 data-i18n="omni-layer-2-title">API & Interface Layer</h2>
+        <p class="section__description" data-i18n="omni-layer-2-intro">This layer acts as the universal translator between the Agent ecosystem and the distributed OmniCompute infrastructure.</p>
+      </div>
+      <div class="highlight" style="margin-bottom: 2rem;">
+        <h3 data-i18n="omni-layer-2-intent-title">Design Intent</h3>
+        <p data-i18n="omni-layer-2-intent">To provide a standardized, consistent interface for agents, regardless of whether the actual model is deployed on a local laptop, an edge server in a factory, or a massive public cloud cluster.</p>
       </div>
       <div class="pillars">
         <article class="pillar">
-          <div class="pill pill--accent" data-i18n="omni-layer-1-tag">Layer 1</div>
-          <h3 data-i18n="omni-layer-1-title">Application & API Layer</h3>
-          <p data-i18n="omni-layer-1-body">Agents or Applications based on Device-Edge-Cloud Collaborative AI Inference. Provides unified REST/gRPC endpoints, allowing higher-level applications to interact with the distributed edge-cloud infrastructure as if calling a single, unified model.</p>
+          <h3 data-i18n="omni-layer-2-comp-1-title">Token APIs & Universal Endpoints</h3>
+          <p data-i18n="omni-layer-2-comp-1-body">Standardized API endpoints (e.g., OpenAI-compatible REST/gRPC APIs). Even if the model is running locally on a constrained edge NPU, it exposes the same API format as a cloud-based GPT-4.</p>
         </article>
         <article class="pillar">
-          <div class="pill pill--accent" data-i18n="omni-layer-2-tag">Layer 2</div>
-          <h3 data-i18n="omni-layer-2-title">Collaborative Control Plane</h3>
-          <p data-i18n="omni-layer-2-body">The routing and security brain of the blueprint, consisting of Privacy Protection (Policy Check, PII Audit, Data Desensitization), Intelligent Routing (Task Complexity Analysis, Resource Awareness, Route Selection), and Adaptation (Resource Monitoring, Cost Analysis, Load Balancing).</p>
+          <h3 data-i18n="omni-layer-2-comp-2-title">Microservices Integration</h3>
+          <p data-i18n="omni-layer-2-comp-2-body">APIs designed to trigger specific, encapsulated business functions (e.g., a dedicated endpoint for vector database retrieval or a specific RAG pipeline).</p>
         </article>
+      </div>
+      <div class="highlight" style="margin-top: 2rem; background: var(--color-error-bg); border-left: 4px solid var(--color-error);">
+        <h3 data-i18n="omni-layer-2-whatif-title">What Happens Without It?</h3>
+        <p data-i18n="omni-layer-2-whatif">Agents would be locked into specific vendors or deployment models. If an enterprise decides to move from a cloud-hosted LLM to a locally hosted open-source model for privacy reasons, the entire agent codebase would need to be rewritten to accommodate the new API schema.</p>
+      </div>
+    </section>
+
+    <section id="layer-3" class="section">
+      <div class="section__header">
+        <div class="pill pill--accent" data-i18n="omni-layer-3-tag">Layer 3</div>
+        <h2 data-i18n="omni-layer-3-title">Collaborative Control Plane (The Brain)</h2>
+        <p class="section__description" data-i18n="omni-layer-3-intro">This layer represents the core intelligence of the OmniCompute blueprint. It makes real-time decisions on security, routing, and resource management.</p>
+      </div>
+
+      <div class="pillar" style="margin-bottom: 3rem;">
+        <h3 data-i18n="omni-layer-3-mod-a-title">A. Privacy Protection Module</h3>
+        <div class="highlight" style="margin: 1rem 0;">
+          <h4 data-i18n="omni-layer-3-mod-a-intent-title">Design Intent</h4>
+          <p data-i18n="omni-layer-3-mod-a-intent">To establish a zero-trust boundary at the edge, ensuring sensitive data never reaches public networks unencrypted or unredacted.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h4 data-i18n="omni-layer-3-mod-a-comp-1-title">Policy Check</h4>
+            <p data-i18n="omni-layer-3-mod-a-comp-1-body">Intercepts requests based on predefined rules. Example: A rule that completely blocks any prompt containing the word "source code" from being sent to a public cloud.</p>
+          </article>
+          <article class="card">
+            <h4 data-i18n="omni-layer-3-mod-a-comp-2-title">Regular Expression (Regex) Audit</h4>
+            <p data-i18n="omni-layer-3-mod-a-comp-2-body">Scans for PII. Example: Automatically detecting credit card numbers or Social Security Numbers in a prompt.</p>
+          </article>
+          <article class="card">
+            <h4 data-i18n="omni-layer-3-mod-a-comp-3-title">Data Desensitization</h4>
+            <p data-i18n="omni-layer-3-mod-a-comp-3-body">Masks or anonymizes data before routing. Example: Replacing patient names in a healthcare edge gateway with dummy variables before sending the symptoms to the cloud for advanced diagnosis.</p>
+          </article>
+        </div>
+        <div class="highlight" style="margin-top: 1rem; background: var(--color-error-bg); border-left: 4px solid var(--color-error);">
+          <h4 data-i18n="omni-layer-3-mod-a-whatif-title">What Happens Without It?</h4>
+          <p data-i18n="omni-layer-3-mod-a-whatif">Severe regulatory breaches. Without this local module, an agent deployed in a hospital might inadvertently send raw patient records to a public cloud LLM, violating HIPAA and resulting in massive fines.</p>
+        </div>
+      </div>
+
+      <div class="pillar" style="margin-bottom: 3rem;">
+        <h3 data-i18n="omni-layer-3-mod-b-title">B. Intelligent Routing Module</h3>
+        <div class="highlight" style="margin: 1rem 0;">
+          <h4 data-i18n="omni-layer-3-mod-b-intent-title">Design Intent</h4>
+          <p data-i18n="omni-layer-3-mod-b-intent">To act as the dynamic traffic cop, deciding the optimal physical location (Device, Edge, or Cloud) to execute a specific inference request.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h4 data-i18n="omni-layer-3-mod-b-comp-1-title">Task Complexity Analysis</h4>
+            <p data-i18n="omni-layer-3-mod-b-comp-1-body">Evaluates the prompt. Example: A simple "summarize this short paragraph" is flagged as low complexity, while "analyze this 100-page financial PDF" is flagged as high complexity.</p>
+          </article>
+          <article class="card">
+            <h4 data-i18n="omni-layer-3-mod-b-comp-2-title">Resource Awareness</h4>
+            <p data-i18n="omni-layer-3-mod-b-comp-2-body">Monitors local hardware. Example: Knowing that the local factory Edge GPU currently has 95% VRAM utilization and cannot accept new requests.</p>
+          </article>
+          <article class="card">
+            <h4 data-i18n="omni-layer-3-mod-b-comp-3-title">Route Selection</h4>
+            <p data-i18n="omni-layer-3-mod-b-comp-3-body">The execution engine. Example: A local coding agent (like Claude Code) asks for a simple syntax fix. The router sends it to a local 8B model. The agent then asks for a complex architecture design; the router transparently forwards this to a cloud-based 70B model.</p>
+          </article>
+        </div>
+        <div class="highlight" style="margin-top: 1rem; background: var(--color-error-bg); border-left: 4px solid var(--color-error);">
+          <h4 data-i18n="omni-layer-3-mod-b-whatif-title">What Happens Without It?</h4>
+          <p data-i18n="omni-layer-3-mod-b-whatif">Massive inefficiencies. Simple tasks would be sent to the cloud, wasting expensive bandwidth and API token costs, while complex tasks might crash local edge devices due to Out-Of-Memory (OOM) errors.</p>
+        </div>
+      </div>
+
+      <div class="pillar">
+        <h3 data-i18n="omni-layer-3-mod-c-title">C. Adaptation (Resource & Traffic Management)</h3>
+        <div class="highlight" style="margin: 1rem 0;">
+          <h4 data-i18n="omni-layer-3-mod-c-intent-title">Design Intent</h4>
+          <p data-i18n="omni-layer-3-mod-c-intent">To protect the infrastructure from being overwhelmed and to optimize operational expenditures (OpEx).</p>
+        </div>
+        <div class="pillars">
+          <article class="pillar">
+            <h4 data-i18n="omni-layer-3-mod-c-comp-1-title">Resource Monitoring & Load Balancing</h4>
+            <p data-i18n="omni-layer-3-mod-c-comp-1-body">Distributing requests across multiple edge nodes.</p>
+          </article>
+          <article class="pillar">
+            <h4 data-i18n="omni-layer-3-mod-c-comp-2-title">Cost Analysis</h4>
+            <p data-i18n="omni-layer-3-mod-c-comp-2-body">Example: If an enterprise's monthly cloud API budget is nearing its limit, this module dynamically shifts more inference load to "free" local edge models, accepting a slight drop in reasoning quality to save costs.</p>
+          </article>
+        </div>
+        <div class="highlight" style="margin-top: 1rem; background: var(--color-error-bg); border-left: 4px solid var(--color-error);">
+          <h4 data-i18n="omni-layer-3-mod-c-whatif-title">What Happens Without It?</h4>
+          <p data-i18n="omni-layer-3-mod-c-whatif">"Bill shock" from runaway cloud API usage, or complete system outages due to uncontrolled traffic spikes overwhelming local endpoints.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="layer-4" class="section section--alt">
+      <div class="section__header">
+        <div class="pill pill--accent" data-i18n="omni-layer-4-tag">Layer 4</div>
+        <h2 data-i18n="omni-layer-4-title">Execution & Inference Data Plane</h2>
+        <p class="section__description" data-i18n="omni-layer-4-intro">This layer is where the actual computation happens. All components here are designed to be plug-and-play, utilizing open-source projects that can be swapped based on enterprise needs.</p>
+      </div>
+
+      <div class="pillar" style="margin-bottom: 3rem;">
+        <h3 data-i18n="omni-layer-4-mod-a-title">A. Inference Gateway</h3>
+        <div class="highlight" style="margin: 1rem 0;">
+          <h4 data-i18n="omni-layer-4-mod-a-intent-title">Design Intent</h4>
+          <p data-i18n="omni-layer-4-mod-a-intent">To proxy, cache, and standardize requests before they hit the actual model weights.</p>
+        </div>
+        <p data-i18n="omni-layer-4-mod-a-example"><strong>Open-Source Example (Replaceable): LiteLLM.</strong> LiteLLM acts as an API proxy. It can translate inputs into the formats required by over 100 different LLM providers (Anthropic, OpenAI, HuggingFace, etc.). It also provides built-in fallback mechanisms (if Model A fails, try Model B). This could be swapped with other gateways like OneAPI or Kong.</p>
+        <div class="highlight" style="margin-top: 1rem; background: var(--color-error-bg); border-left: 4px solid var(--color-error);">
+          <h4 data-i18n="omni-layer-4-mod-a-whatif-title">What Happens Without It?</h4>
+          <p data-i18n="omni-layer-4-mod-a-whatif">Managing API keys, fallbacks, and load balancing across dozens of different model providers becomes a chaotic, unmaintainable mess.</p>
+        </div>
+      </div>
+
+      <div class="pillar">
+        <h3 data-i18n="omni-layer-4-mod-b-title">B. On-Premise (Local Stack)</h3>
+        <div class="highlight" style="margin: 1rem 0;">
+          <h4 data-i18n="omni-layer-4-mod-b-intent-title">Design Intent</h4>
+          <p data-i18n="omni-layer-4-mod-b-intent">To execute AI models natively on edge hardware, ensuring offline survival and zero-latency responses.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h4 data-i18n="omni-layer-4-mod-b-comp-1-title">Local Inference Framework</h4>
+            <p data-i18n="omni-layer-4-mod-b-comp-1-body">Software to load and run models. Examples: vLLM (for high-throughput serving) or Ollama (for easy local deployment). These can be swapped based on hardware.</p>
+          </article>
+          <article class="card">
+            <h4 data-i18n="omni-layer-4-mod-b-comp-2-title">Local XPU</h4>
+            <p data-i18n="omni-layer-4-mod-b-comp-2-body">The physical hardware (NVIDIA Jetsons, Intel CPUs, specialized NPUs).</p>
+          </article>
+          <article class="card">
+            <h4 data-i18n="omni-layer-4-mod-b-comp-3-title">Model Conversion Toolset</h4>
+            <p data-i18n="omni-layer-4-mod-b-comp-3-body">Tools to shrink massive cloud models into edge-friendly formats. Examples: Converting a model to GGUF format for CPU execution, or using TensorRT-LLM for optimized GPU performance.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="layer-5" class="section">
+      <div class="section__header">
+        <div class="pill pill--accent" data-i18n="omni-layer-5-tag">Layer 5</div>
+        <h2 data-i18n="omni-layer-5-title">Infrastructure Layer (Dynamic Topologies & KubeEdge)</h2>
+        <p class="section__description" data-i18n="omni-layer-5-intro">The infrastructure layer provides the container orchestration, network tunneling, and lifecycle management for everything above. Because OmniCompute aims to be a universal AgentOS, the infrastructure must adapt to various enterprise topologies.</p>
+      </div>
+
+      <div class="pillars">
         <article class="pillar">
-          <div class="pill pill--accent" data-i18n="omni-layer-3-tag">Layer 3</div>
-          <h3 data-i18n="omni-layer-3-title">Execution & Inference Data Plane</h3>
-          <p data-i18n="omni-layer-3-body">Inference Gateway (e.g., LiteLLM Proxy Server) acts as the critical bridge, standardizing protocols across all distributed models. Includes Local Inference Framework, Local XPU management, and Model Conversion Toolset for edge deployment.</p>
+          <div class="pill pill--accent" data-i18n="omni-layer-5-scenario-a-tag">Scenario A</div>
+          <h3 data-i18n="omni-layer-5-scenario-a-title">The Full Continuum (Device + Edge + Cloud) & Edge-Cloud</h3>
+          <p data-i18n="omni-layer-5-scenario-a-role"><strong>Role of KubeEdge:</strong> This is where KubeEdge shines as the reference architecture. Enterprises deploy the Cloud Core in their central data center and Edge Nodes in remote locations (factories, retail stores).</p>
+          <p data-i18n="omni-layer-5-scenario-a-intent"><strong>Design Intent:</strong> KubeEdge ensures autonomous operation. If the factory loses internet connection, KubeEdge's local controller ensures the edge AI agents continue running without interruption. It also manages OTA (Over-The-Air) updates, deploying new model weights from the cloud to thousands of edge nodes securely. (Note: KubeEdge can be swapped with alternatives like OpenYurt or proprietary edge management platforms).</p>
         </article>
+
         <article class="pillar">
-          <div class="pill pill--accent" data-i18n="omni-layer-4-tag">Layer 4</div>
-          <h3 data-i18n="omni-layer-4-title">Infrastructure Layer (KubeEdge)</h3>
-          <p data-i18n="omni-layer-4-body">Leveraging KubeEdge for seamless connectivity. Edge Node contains Local Controller and Worker, ensuring autonomous operation and local privacy. Cloud Node contains Global Manager and Worker managed by Kubernetes, handling global routing policies and model distribution.</p>
+          <div class="pill pill--accent" data-i18n="omni-layer-5-scenario-b-tag">Scenario B</div>
+          <h3 data-i18n="omni-layer-5-scenario-b-title">Device-Cloud (No Intermediate Edge Node)</h3>
+          <p data-i18n="omni-layer-5-scenario-b-role"><strong>Role of Infrastructure:</strong> In topologies where personal devices (smartphones, AI PCs) connect directly to a cloud backend, a dedicated edge management framework like KubeEdge running on the device is often unnecessary overhead.</p>
+          <p data-i18n="omni-layer-5-scenario-b-intent"><strong>Design Intent:</strong> Here, standard Kubernetes clusters reside in the enterprise's private cloud or public cloud. The KubeEdge control plane acts simply as the centralized enterprise private cloud managing the macro-infrastructure, while the devices communicate directly via the API Layer (Layer 2) using standard REST/gRPC or IoT MQTT protocols.</p>
+        </article>
+
+        <article class="pillar">
+          <div class="pill pill--accent" data-i18n="omni-layer-5-scenario-c-tag">Scenario C</div>
+          <h3 data-i18n="omni-layer-5-scenario-c-title">Pure Air-Gapped Edge (Local Only)</h3>
+          <p data-i18n="omni-layer-5-scenario-c-role"><strong>Role of Infrastructure:</strong> In highly secure environments (e.g., defense, nuclear facilities), there is zero cloud connection.</p>
+          <p data-i18n="omni-layer-5-scenario-c-intent"><strong>Design Intent:</strong> The infrastructure layer collapses into a local Kubernetes cluster (like K3s) running entirely on the edge. The OmniCompute Control Plane (Layer 3) handles intelligent routing strictly across available local XPU nodes, ensuring the AgentOS remains fully functional in isolation.</p>
         </article>
       </div>
     </section>
